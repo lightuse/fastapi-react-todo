@@ -3,7 +3,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware # CORSをインポート
 
-from . import models, schemas, database
+import models, schemas, database
 
 models.Base.metadata.create_all(bind=database.engine)
 
